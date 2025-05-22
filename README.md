@@ -1,13 +1,14 @@
 # Key Security Indicators and Validations
 Each Key Security Indicator (KSI) defined in RFC-0006 is addressed by its own, individual, purpose-built script. These scripts are designed to evaluate a specific KSI validation requirement using direct, automated checks against our live environment.
 
-Each script produces a structured JSON result that includes:
+Each script produces a JSON results file that includes:
 - A true, false, or partial outcome
 - A brief description of what was checked and how
 - A timestamp of when the script was executed
-- A SHA256 checksum of both the script and the result file
+- A SHA256 checksum of the script that produced the results
+- A path to the script that ran for easy auditing
 
-All validations are run daily. The results are then compiled into a single, comprehensive dashboard.json that are published and versioned for transparency.
+All validations are run daily. The results are then compiled into single, comprehensive dashboard.json files that are published and versioned for transparency.
 To ensure audit integrity, each script is hashed at runtime, and the resulting checksum is embedded in the output JSON. The output file is also hashed, and its checksum is included alongside the result in the comprehensive dashboard.json file. Both values are published in the public dashboard. This allows anyone to verify:
 1. That the published script matches the one that actually ran
 2. That the output file was not modified after execution
@@ -24,7 +25,6 @@ Example single KSI output:
   "result": true,
   "timestamp_utc": "2025-05-21T14:00:00Z",
   "script_checksum_sha256": "3f1a2b487e4f6c9200d01bceaa3fdbf2e34667e8b02e75f9c89d778b43e9f41c",
-  "results_checksum_sha256": "8c93e5f9a4cb576f2c92fa8e52eebc77f86cd6d2579e0f01de1e3b0b4a6e8439",
   "script_s3_path": "s3://redacted-bucket/scripts/sc-03-ebs-encryption.sh",
 }
 ```
