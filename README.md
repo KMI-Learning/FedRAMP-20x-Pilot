@@ -88,6 +88,6 @@ Each day, we compare the current checksum of every running script with the 3PAO-
 # CSP Rationale and Summary
 Our approach is grounded in the core vision of FedRAMP 20x: transparency, automation, and machine-verifiable evidence.
 
-We designed our solution from a blank-page perspective—building lightweight, purpose-built scripts that validate each KSI directly through automation. Results are compiled into a unified dashboard.json file, signed by our 3PAO, and published daily for public verification.
+We designed our solution from a blank-page perspective—building lightweight, purpose-built scripts that validate each KSI directly through automation. Results are compiled into a unified dashboard.json file, published daily for public verification, and signed by our 3PAO during annual audit engagements.
 
 This framework replaces traditional audit artifacts with reproducible, code-driven validations that are simple to understand, easy to verify, and continuously auditable.
