@@ -1,5 +1,5 @@
 # Key Security Indicators and Validations
-Each Key Security Indicator (KSI) defined in RFC-0006 is addressed by its own, individual, purpose-built script. These scripts are designed to evaluate a specific KSI validation requirement using direct, automated checks against our live AWS environment.
+Each Key Security Indicator (KSI) defined in RFC-0006 is addressed by its own, individual, purpose-built script. These scripts are designed to evaluate a specific KSI validation requirement using direct, automated checks against our live environment.
 
 Each script produces a structured JSON result that includes:
 - A true, false, or partial outcome
